@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+class <% if class_path.present? %><%= class_path.map(&:camelize).join("::") %>::<% end %><%= file_name.camelize %>Action
+  include Workflow::Action
+
+<% expects.each do |key| -%>
+  expects :<%= key %>
+<% end -%>
+<% options[:promises].each do |key| -%>
+  promises :<%= key %>
+<% end -%>
+  def call(ctx)
+  end
+end

@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+class <% if class_path.present? %><%= class_path.map(&:camelize).join("::") %>::<% end %><%= class_name %>Organizer
+  include Workflow::Organizer
+
+  def call(<%= steps.empty? ? "" : steps.join(":, ") + ":" %>)
+    with(<%= steps.empty? ? "" : steps.join(":, ") + ":" %>).reduce(
+<% steps.each do |step| -%>
+      <%= step.camelize %>Action.new,
+<% end -%>
+    )
+  end
+end
