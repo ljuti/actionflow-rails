@@ -7,7 +7,15 @@ Rails integration for the [Actionflow](https://github.com/ljuti/actionflow) work
 Add to your Gemfile:
 
 ```ruby
-gem "actionflow-rails"
+source "https://gem.fury.io/ljuti/" do
+  gem "actionflow-rails"
+end
+```
+
+Or install directly from Gemfury:
+
+```bash
+gem install actionflow-rails --source https://gem.fury.io/ljuti/
 ```
 
 The gem depends on `actionflow` and `railties` — both are pulled in automatically.
