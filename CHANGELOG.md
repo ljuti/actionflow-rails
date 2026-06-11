@@ -1,4 +1,4 @@
-## 0.1.0 (Unreleased)
+## 0.1.1 (2026-06-11)
 
 - Initial release
 - Railtie: auto-configures `Workflow.configuration.logger` from `Rails.logger`

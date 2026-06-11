@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "actionflow", "~> 0.1.0"
+  spec.add_dependency "actionflow"
   spec.add_dependency "railties", ">= 6.0"
 
   spec.add_development_dependency "mutant-rspec", "~> 0.16.0"
